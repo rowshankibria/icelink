@@ -2,16 +2,16 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: helm-sphere-app
-  namespace: argocd
+  namespace: helm-sphere
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
     server: https://kubernetes.default.svc
-    namespace: argocd
+    namespace: helm-sphere
   project: default
   source:
-    path: HelmSphere/Auth
+    path: HelmSphere.Auth
     repoURL: https://github.com/mmileon/icelink.git
     targetRevision: HEAD
     helm:
