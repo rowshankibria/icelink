@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: helm-sphere-auth
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      run: helm-sphere-auth
+  template:
+    metadata:
+      labels:
+        run: helm-sphere-auth
+    spec:
+      containers:
+      - name: helm-sphere-auth
+        image: nginx
+        ports:
+          - containerPort: 80
+        imagePullPolicy: IfNotPresent

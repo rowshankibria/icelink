@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: helm-sphere-core
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      run: helm-sphere-core
+  template:
+    metadata:
+      labels:
+        run: helm-sphere-core
+    spec:
+      containers:
+      - name: helm-sphere-core
+        image: nginx
+        ports:
+          - containerPort: 80
+        imagePullPolicy: IfNotPresent
