@@ -11,8 +11,8 @@ spec:
     namespace: argocd
   project: default
   source:
-    path: HelmSphere/Core
-    repoURL: https://github.com/mmileon/argocd-tutorial.git
+    path: HelmSphere.Core
+    repoURL: https://github.com/mmileon/icelink.git
     targetRevision: HEAD
     helm:
       valueFiles:

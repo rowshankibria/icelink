@@ -12,7 +12,7 @@ spec:
   project: default
   source:
     path: HelmSphere/Auth
-    repoURL: https://github.com/mmileon/argocd-tutorial.git
+    repoURL: https://github.com/mmileon/icelink.git
     targetRevision: HEAD
     helm:
       valueFiles:
