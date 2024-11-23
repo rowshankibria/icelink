@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: helm-sphere-core
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       run: helm-sphere-core
