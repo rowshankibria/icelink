@@ -11,7 +11,7 @@ spec:
     namespace: argocd
   project: default
   source:
-    path: HelmSphere
+    path: HelmSphere.App
     repoURL: https://github.com/mmileon/icelink.git
     targetRevision: HEAD
     helm:
